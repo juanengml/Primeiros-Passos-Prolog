@@ -75,14 +75,14 @@ pegar(X):- local_duda(F),duda_tem(R), F ==floresta,R \== rede, X == bessy,
 /* rodar */
 
 
-/* Finalizar o jogo */
+/* Finalizar o jogo  */
+
 
 finalizar:- local_duda(G), G == galinheiro, duda_tem(C), C == bessy,write("\t\t OBJETIVO COMPLETO ! PARABENS !"),nl.
-finalizar:- local_duda(G), G \== galinheiro, duda_tem(C), C \== bessy,write("Não esta no galinheiro e não tem a bessy"),nl.
+rodar:- finalizar.
+rodar:- read(X),call(X), rodar.
 
-rodar:-finalizar.
 
-/*rodar:- finalizar. */
 
 
 
