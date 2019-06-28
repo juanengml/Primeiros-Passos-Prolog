@@ -1,7 +1,9 @@
 :- dynamic duda_tem/1.
 :- dynamic local_duda/1.
 
-/*DUDA TEM NADA NO COME«O */
+/*DUDA TEM NADA NO COME√áO */
+
+/*TIME DE DESENVOLVEDORES: JUAN, ESDRAS E DIORGINES*/
 
 duda_tem(not_rede).
 duda_tem(not_banho).
@@ -44,7 +46,7 @@ ir_para(X):- local_duda(P), P == patio, acessivel(P,X), X == casa, duda_tem(Y), 
    write("Vc esta de banho tomado, entrou na casa ! pegue a rede e boa sorte na floresta"), nl.
 
 ir_para(X):- local_duda(P), P == patio, acessivel(P,X), X == casa, duda_tem(Y), Y  \== banho ,
-   write("N„o pode entrar precisa de banho, va pra lagoa e tome banho"),nl.
+   write("N√£o pode entrar precisa de banho, va pra lagoa e tome banho"),nl.
 
 ir_para(X):- write("LOCAL INEXISTENTE: entre em contato com o suporte para solicitar novos itens !\nsuporte: suporte@suporte.com"), nl.
 
@@ -66,7 +68,7 @@ pegar(X):- local_duda(F),duda_tem(R), F ==floresta,R==rede, X == bessy,
 
 
 pegar(X):- local_duda(F),duda_tem(R), F ==floresta,R \== rede, X == bessy,
-    write("n„o CAPTURADO ! Bessy n„o capturada com sucesso ! \n n„o Leve para o Galinheiro ! "),nl.
+    write("n√£o CAPTURADO ! Bessy n√£o capturada com sucesso ! \n n√£o Leve para o Galinheiro ! "),nl.
 
 pegar(X):-  write("ITEM INEXISTENTE: entre em contato com o suporte para solicitar novos itens !\nsuporte: suporte@suporte.com") ,nl.
 
